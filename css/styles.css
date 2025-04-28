@@ -1,0 +1,418 @@
+/* Otsikoiden tyylit vain tietyssä osassa */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* Pakottaa pääsisällön venymään */
+}
+
+body.index-page main {
+  margin-top: 80px; /* Vain index-sivulla */
+}
+
+.hero-section h1 {
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+.hero-section h2 {
+  padding-bottom: 0px;
+  text-align: left;
+}
+
+.hero-section h3 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.hero-section h5 {
+  padding-top: 5px;
+  padding-bottom: 0px;
+  text-align: left;
+}
+
+.portfolio {
+  font-family: "Sedgwick Ave", Helvetica, Arial, sans-serif; /* Käytetään Google Fonts -fonttia */
+  font-size: 60px;
+  color: #148aa5;
+  margin: 0 !important;
+}
+
+.profile-wrapper {
+  display: flex; /* Kuva ja teksti vierekkäin */
+  flex-wrap: nowrap;
+  align-items: center; /* Keskitetään sisältö pystysuunnassa */
+}
+
+.profile-image img {
+  max-width: 300px;
+  height: auto; /* Säilyttää mittasuhteet */
+  margin-left: 0px;
+  margin-right: 20px; /* Tilaa kuvan ja tekstin väliin */
+}
+
+.profile-text {
+  flex: 1; /* Teksti venyy jäljelle jäävään tilaan */
+}
+
+.education {
+  text-align: left; /* Varmistaa, että teksti on vasemmalla */
+  padding-left: 0; /* Poistaa sisennyksen vasemmalta */
+  padding-top: 10px;
+}
+
+.education ul {
+  padding-left: 0; /* Poistaa oletussisennykset */
+}
+
+.education ul li {
+  list-style: none; /* Poistaa oletuslistamerkit */
+  margin-bottom: 10px; /* Lisää väliä listan kohtiin */
+}
+
+.education ul li::before {
+  content: "•";
+  color: grey;
+  font-weight: bold;
+  display: inline-block;
+  width: 15px; /* Väli luettelomerkin ja tekstin välillä */
+}
+
+/* Muokkaa vain navigaation tyylit */
+.navbar {
+  box-shadow: 0 2px 4px rgba(77, 77, 77, 0.1);
+  display: flex;
+  align-items: center; /* Pystysuuntainen keskitys */
+  justify-content: space-between; /* Tasataan vasemmalle ja oikealle */
+  height: 80px; /* Kiinteä korkeus */
+  background-color: #343a40; /* Taustaväri */
+}
+
+/* Muokkaa fas fa-home -ikonin väriä */
+.navbar .navbar-brand i.fas.fa-home {
+  color: lightgray; /* Määritä haluamasi väri */
+}
+
+/* Hover-efekti */
+.navbar .navbar-brand i.fas.fa-home:hover {
+  color: #e4e5e6; /* Määritä hover-väri */
+}
+
+/* Muut tyylit navbarin linkeille */
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: center; /* Tasataan nav-osion linkit keskelle */
+  width: 100%; /* Varmistaa, että lista on täysleveä */
+}
+
+.navbar-nav .nav-link {
+  color: white; /* Linkkien väri */
+  padding: 10px 15px; /* Lisää tilaa linkkien ympärille */
+}
+
+/* Toggler-buttonin tyylit */
+.navbar-toggler {
+  border: none; /* Poistaa rajan hamburger-valikosta */
+}
+
+/* Muokkaa vain jumbotronin tyylejä */
+.jumbotron {
+  text-align: left;
+  padding: 0;
+}
+
+.hero-section {
+  background: rgb(250, 250, 250);
+  color: black;
+  padding-bottom: 20px;
+
+  text-align: left;
+  font-size: auto;
+}
+
+/* Kappaleiden väli ja yläreuna */
+.hero-section p {
+  margin-top: 20px; /* Lisää väli ylös */
+  margin-bottom: 20px; /* Lisää väli alas */
+  text-align: left;
+}
+
+/* Lisää väliä kappaleiden väliin */
+.hero-section .lead {
+  margin-bottom: 15px; /* Lisää lisää väliä kappaleiden väliin */
+}
+
+.img-fluid {
+  max-width: 90%; /* Kuva ei kasva yli containerin leveyden */
+  height: auto; /* Säilyttää kuvan mittasuhteet */
+  margin: 15px;
+}
+
+.omakuva {
+  max-width: 80%;
+  height: auto;
+  margin: 10;
+}
+
+.img-fluid-content {
+  max-width: 100%; /* Kuva ei kasva yli containerin leveyden */
+  height: auto; /* Säilyttää kuvan mittasuhteet */
+}
+
+/* Modaalin maksimileveyden kasvattaminen */
+.modal-dialog {
+  max-width: 90%; /* Skaalaa modaalin suurimmaksi osaksi näyttöä */
+}
+
+.modal-body img {
+  width: auto; /* Kuva saa käyttää alkuperäistä kokoa */
+  max-width: 100%; /* Ei ylitä modaalin kokoa */
+  height: auto; /* Säilyttää oikean kuvasuhteen */
+}
+
+.embed-responsive-16by9 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#carousel-pdf-link {
+  display: block;
+  padding: 20px;
+}
+
+.custom-buttons {
+  display: flex;
+  flex-direction: row; /* Suuremmilla näytöillä painikkeet rivissä */
+  gap: 10px; /* Lisää väliä painikkeiden väliin */
+}
+
+.custom-buttons .btn {
+  /* Varmistaa, että painikkeet eivät ole liian leveitä */
+  min-width: auto;
+}
+
+footer {
+  background-color: #343a40;
+  color: lightgray;
+  display: flex; /* Käytetään Flexboxia */
+  justify-content: center; /* Keskittää elementit vaakasuunnassa */
+  align-items: center; /* Keskittää sisällön pystysuunnassa */
+  padding: 20px 10px; /* Lisää tilaa footerin ympärille */
+}
+
+.container-footer {
+  display: flex; /* Käytetään Flexboxia myös containerille */
+  justify-content: center; /* Keskittää linkit vaakasuunnassa */
+  align-items: center; /* Keskittää linkit pystysuunnassa */
+  gap: 20px; /* Lisää välin linkkien väliin */
+}
+
+footer a {
+  color: rgb(184, 183, 183);
+  text-decoration: none; /* Poistaa alleviivauksen */
+}
+
+footer a:hover {
+  color: #e4e5e6;
+  text-decoration: none;
+}
+
+/* MEDIAQUERY */
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.45em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.1em; /* Pienennetään otsikoita maltillisemmin */
+  }
+
+  p.lead.text-muted {
+    font-size: 1em; /* Pienennetään fonttikokoa suhteessa oletuskokoon */
+    padding-right: 15px;
+  }
+
+  p.lead.text-muted a {
+    font-size: 1em; /* Pienennetään linkkien fonttikokoa pienillä näytöillä */
+  }
+
+  .education {
+    text-align: left; /* Varmistaa, että teksti on vasemmalla */
+    padding-left: 15; /* Poistaa sisennyksen vasemmalta */
+    font-size: 1em;
+  }
+
+  .education ul {
+    padding-left: 10px;
+    font-size: 1em;
+  }
+
+  .education ul li {
+    list-style: none; /* Poistaa oletuslistamerkit */
+    margin-bottom: 10px; /* Lisää väliä listan kohtiin */
+    font-size: 1em;
+  }
+
+  .education ul li::before {
+    content: "•";
+    color: grey;
+    font-weight: bold;
+    display: inline-block;
+    width: 15px; /* Väli luettelomerkin ja tekstin välillä */
+    font-size: 1em;
+  }
+
+  .profile-wrapper {
+    display: block; /* Asetetaan kuva ja teksti allekkain */
+  }
+
+  .profile-image img {
+    max-width: 200px;
+    margin: 0 auto 20px auto; /* Keskitetään kuva ja lisätään tilaa alapuolelle */
+    display: block;
+  }
+
+  .profile-text {
+    text-align: center; /* Keskitetään teksti */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    text-align: left;
+  }
+  h2 {
+    text-align: left;
+  }
+
+  .container h3 {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    text-align: left;
+  }
+
+  h4,
+  h5,
+  h6 {
+    text-align: left;
+  }
+
+  p.lead.text-muted {
+    padding-top: 0;
+  }
+
+  .hero-section a {
+    font-size: 1.1rem; /* Pienennä fonttia pienemmillä näytöillä */
+  }
+  .hero-section p {
+    text-align: left; /* Vaihtoehtoisesti kohdistus pienemmille näytöille */
+  }
+
+  #carousel {
+    display: none;
+  }
+
+  #carousel-pdf-link {
+    display: block;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 10px;
+  }
+  .img-fluid {
+    max-width: 60%; /* Kuva ei kasva yli containerin leveyden */
+    height: auto;
+  }
+
+  .navbar {
+    box-shadow: 0 2px 4px rgba(77, 77, 77, 0.1);
+    display: flex;
+    align-items: center; /* Pystysuuntainen keskitys */
+    justify-content: space-between; /* Tasataan vasemmalle ja oikealle */
+    height: auto;
+    background-color: #343a40; /* Taustaväri */
+    text-align: right;
+  }
+
+  .profile-wrapper {
+    display: block; /* Asetetaan kuva ja teksti allekkain */
+  }
+
+  .profile-image img {
+    margin: 0 auto 20px auto; /* Keskitetään kuva ja lisätään tilaa alapuolelle */
+    display: block;
+  }
+
+  .profile-text {
+    text-align: center; /* Keskitetään teksti */
+  }
+
+  .custom-buttons {
+    display: flex;
+    flex-direction: column; /* Pienillä näytöillä painikkeet ovat allekkain */
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Lisää marginaali ja padding vain 768px leveämmille näytöille */
+  .education {
+    padding-left: 20px; /* Lisää hieman tilaa vasemmalle */
+    padding-right: 20px; /* Lisää hieman tilaa oikealle */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px; /* Rajoita luettelon leveyttä */
+  }
+
+  .education ul {
+    padding-left: 0; /* Poistaa oletuslistan sisennykset */
+    margin-left: 0; /* Poistaa vasemman marginaalin */
+  }
+
+  .education ul li {
+    list-style: none;
+    margin-bottom: 10px; /* Lisää väliä listan kohtiin */
+  }
+
+  /* Muutetaan jumbotronin ja containerin asettelua */
+  .jumbotron .container {
+    max-width: 800px;
+    margin: 0;
+  }
+
+  .container {
+    max-width: 700px; /* Rajaa kontainerin leveyttä */
+  }
+
+  .image-container {
+    text-align: center; /* Kohdistaa kuvan keskelle */
+  }
+
+  .omakuva {
+    max-width: 45%;
+    height: auto;
+  }
+
+  #carousel {
+    max-width: 1200px; /* Asetetaan karusellin maksimileveys */
+    margin: 0 auto; /* Keskitetään karuselli sivulle */
+  }
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+}
